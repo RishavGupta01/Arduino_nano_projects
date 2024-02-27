@@ -16,6 +16,7 @@
 
 // 3. **Interactivity** (Optional):
 // - Within every 10 seconds, the red LEDs (seconds hand) light on for just instants.
+// - Every minute, all the LEDs light on for just instants.
 
 const int hoursLeds[] = {12, 11, 10};    // blue leds for hrs
 const int minutesLeds[] = {8, 7, 6};     // grn leds for min
@@ -32,24 +33,26 @@ void setup() {
 void loop() {
   unsigned long currentTime = millis();
   int hours = (currentTime / 3600000) % 24; 
-  int minutes = (currentTime / 60000) % 60;  
-  int seconds = (currentTime / 1000) % 60;  
+  int minutes = (currentTime / 60000) % 60; 
+  int seconds = (currentTime / 1000) % 60;   
 
   displayHours(hours);
   displayMinutes(minutes);
   displaySeconds(seconds);
 
-  if (seconds % 10 == 0) {
-    blinkSecondsHand();
+  static int prevMinute = -1;
+  if (minutes != prevMinute) {
+    swipeUpEffect(); 
+    prevMinute = minutes;
   }
 
-  delay(1000);
+  delay(1000); 
 }
 
 void displayHours(int h) {
   for (int i = 0; i < 3; i++) {
     digitalWrite(hoursLeds[i], (h >> i) & 1);
-  }
+    }
 }
 
 void displayMinutes(int m) {
@@ -59,17 +62,20 @@ void displayMinutes(int m) {
 }
 
 void displaySeconds(int s) {
-   for (int i = 0; i < 3; i++) {
+  for (int i = 0; i < 3; i++) {
     digitalWrite(secondsLeds[i], (s >> i) & 1);
   }
 }
-
-void blinkSecondsHand() {
+void swipeUpEffect() {
   for (int i = 0; i < 3; i++) {
+    digitalWrite(hoursLeds[i], HIGH);
+    digitalWrite(minutesLeds[i], HIGH);
     digitalWrite(secondsLeds[i], HIGH);
   }
-  delay(200);
+  delay(500); 
   for (int i = 0; i < 3; i++) {
+    digitalWrite(hoursLeds[i], LOW);
+    digitalWrite(minutesLeds[i], LOW);
     digitalWrite(secondsLeds[i], LOW);
   }
 }
