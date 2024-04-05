@@ -38,3 +38,9 @@ The projects are organized by difficulty level, from beginner to advanced. Each 
     - RC Car: Learn how to create a remote-controlled car using Arduino Nano, a DC motor, a servo motor, and a Bluetooth module.
     - Voice Control: Learn how to control an LED or a buzzer with your voice using Arduino Nano, a microphone module, and the EasyVR library.
     - Weather Station: Learn how to create a weather station that can measure the temperature, humidity, pressure, and altitude using Arduino Nano, a BMP180 sensor, and an OLED display.
+
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![image](https://github.com/RishavGupta01/Arduino_nano_projects/assets/110810862/76674510-9a3a-4bf7-b517-325615d460e9)
+
+**Blinking LED: Learn how to blink an LED using Arduino Nano and a resistor.**
