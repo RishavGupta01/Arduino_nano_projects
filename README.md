@@ -43,4 +43,4 @@ The projects are organized by difficulty level, from beginner to advanced. Each 
 
 ![image](https://github.com/RishavGupta01/Arduino_nano_projects/assets/110810862/76674510-9a3a-4bf7-b517-325615d460e9)
 
-**Blinking LED: Learn how to blink an LED using Arduino Nano and a resistor.**
+**Blinking LED: Learn how to blink an LED using Arduino Uno and a resistor.**
