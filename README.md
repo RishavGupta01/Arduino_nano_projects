@@ -44,3 +44,8 @@ The projects are organized by difficulty level, from beginner to advanced. Each 
 ![image](https://github.com/RishavGupta01/Arduino_nano_projects/assets/110810862/76674510-9a3a-4bf7-b517-325615d460e9)
 
 **Blinking LED: Learn how to blink an LED using Arduino Uno and a resistor.**
+
+![image](https://github.com/user-attachments/assets/9d1e9d21-6398-4f90-97b3-2ac48ea21711)
+
+**Ping-pong game using Arduino Nano and 0.96inch Oled display module**
+
